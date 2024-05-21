@@ -9,5 +9,28 @@ def save_data(data, file_path):
     return None
 
 def preprocess_data(data):
+    '''
+    This function will remove any missing values and duplicates from the data.
+    
+    Parameters:
+    data: pandas DataFrame
+    
+    Returns:
+    data: pandas DataFrame
+    '''
     data = data.dropna()
+    data = data.drop_duplicates()
+    return data
+
+def normalize_data(data):
+    '''
+    This function will normalize the data.
+    
+    Parameters:
+    data: pandas DataFrame
+    
+    Returns:
+    data: pandas DataFrame
+    '''
+    data = (data - data.mean()) / data.std()
     return data
