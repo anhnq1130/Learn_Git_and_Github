@@ -1,3 +1,5 @@
+from utils import *
+
 def welcome():
     print("Welcome to Learn Git and Github")
     
@@ -6,7 +8,3 @@ def main():
     
 if __name__ == "__main__":
     main()
-
-
-
-
