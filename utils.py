@@ -34,3 +34,16 @@ def normalize_data(data):
     '''
     data = (data - data.mean()) / data.std()
     return data
+
+def visualize_data(data):
+    '''
+    This function will visualize the data.
+    
+    Parameters:
+    data: pandas DataFrame
+    
+    Returns:
+    None
+    '''
+    data.plot()
+    return None
